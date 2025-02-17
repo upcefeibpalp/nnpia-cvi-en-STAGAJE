@@ -1,0 +1,4 @@
+ChatGPT: How to add Spring Boot DevTools dependency using Gradle and implementation approach? (ověřeno dle: https://docs.spring.io/spring-boot/docs/1.5.16.RELEASE/reference/html/using-boot-devtools.html)
+Microsoft Copilot: K čemu slouží závislost Spring Boot DevTools? Jaká je její největší výhoda?
+ChatGPT: Spring Boot controller annotation @GetMapping to accept an id as a query parameter. (ověřeno dle: https://stackoverflow.com/questions/32201441/how-do-i-retrieve-query-parameters-in-a-spring-boot-controller)
+ChatGPT: Change it to accept id as a path parameter. (ověřeno dle: https://stackoverflow.com/questions/59577705/spring-boot-using-pathvariable-to-get-hold-of-an-id-from-url)
