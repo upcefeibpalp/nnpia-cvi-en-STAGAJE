@@ -4,21 +4,20 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 @Entity
-@Table(name = "USERS")
+@Table(name = "PETS")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class User {
+public class Pet {
     @Id
     private long id;
 
     @Column(nullable = false)
-    @ToString.Exclude
-    private String password;
+    private String name;
 
-    @Column(nullable = false)
-    private String email;
+    @ManyToOne
+    @JoinColumn(name = "owner_id", referencedColumnName = "id")
+    private User owner;
 }

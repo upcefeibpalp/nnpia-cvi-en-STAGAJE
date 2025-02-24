@@ -1,0 +1,11 @@
+ChatGPT: Where in my Spring Boot project should I put docker-compose.yaml file?
+ChatGPT: After running the docker-compose command, how to connect to the database using IntelliJ IDEA? (ověřeno dle: https://www.jetbrains.com/help/idea/running-a-dbms-image.html#connect_to_psql)
+ChatGPT: How to change an existing data class User into a database entity?
+ChatGPT: In UserRepository, implement Query method to find all users by email.
+ChatGPT: Change UserController to accept an optional Query parameter email. (ověřeno dle: https://stackoverflow.com/questions/32201441/how-do-i-retrieve-query-parameters-in-a-spring-boot-controller)
+Microsoft Copilot: Zjištěte všechny hodnoty vlastnosti spring.jpa.hibernate.ddl-auto a co tyto hodnoty znamenají.
+Microsoft Copilot: K čemu slouží anotace @GeneratedValue a jakých hodnoto může nabývat parametr stragety?
+Microsoft Copilot: K čemu slouží anotace @Column?
+Microsoft Copilot: K čemu slouží anotace @Transactional?
+Microsoft Copilot: K čemu slouží anotace @Query?
+Microsoft Copilot: K čemu slouží anotace @JsonIgnore?
