@@ -52,6 +52,25 @@ class UserControllerTest {
     }
 
     @Test
+    void findAllUsers_givenEmail() throws Exception {
+        mockMvc.perform(get("/api/v1/users?email=nnpia25@gmail.com"))
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+                .andExpect(jsonPath("$", hasSize(1)))
+                .andExpect(jsonPath("$[0].id", is(69)))
+                .andExpect(jsonPath("$[0].password", is("nnpia25")))
+                .andExpect(jsonPath("$[0].email", is("nnpia25@gmail.com")));
+    }
+
+    @Test
+    void findAllUsers_givenWrongEmail_returnsEmptyList() throws Exception {
+        mockMvc.perform(get("/api/v1/users?email=nnpia69@gmail.com"))
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+                .andExpect(jsonPath("$", hasSize(0)));
+    }
+
+    @Test
     void findUser() throws Exception {
         mockMvc.perform(get("/api/v1/users/69"))
                 .andExpect(status().isOk())
@@ -62,8 +81,10 @@ class UserControllerTest {
     }
 
     @Test
-    void findUser_whenGivenWrongId_Returns404() throws Exception {
+    void findUser_givenWrongId_returns404() throws Exception {
         mockMvc.perform(get("/api/v1/users/68"))
                 .andExpect(status().isNotFound());
     }
+
+
 }
