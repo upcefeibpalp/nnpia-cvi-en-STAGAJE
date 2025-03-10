@@ -48,4 +48,11 @@ public class UserService {
         log.debug("Finding all users with email: {}", email);
         return userRepository.findAllByEmail(email);
     }
+
+    public User createUser(User user) {
+        if (userRepository.existsByIdOrEmail(user.getId(), user.getEmail())) {
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "User already exists");
+        }
+        return userRepository.save(user);
+    }
 }
