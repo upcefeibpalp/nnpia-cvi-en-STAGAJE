@@ -53,6 +53,14 @@ public class UserService {
         if (userRepository.existsByIdOrEmail(user.getId(), user.getEmail())) {
             throw new ResponseStatusException(HttpStatus.CONFLICT, "User already exists");
         }
+        log.debug("New user created: {}", user.toString());
         return userRepository.save(user);
+    }
+
+    public User deleteUser(Long id) {
+        User user = findUserById(id);
+        userRepository.delete(user);
+        log.debug("User deleted: {}", user.toString());
+        return user;
     }
 }
