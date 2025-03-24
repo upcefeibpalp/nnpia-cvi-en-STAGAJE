@@ -1,11 +1,10 @@
 interface UserProps {
     guid : number,
     email : string,
-    status : [
+    status : {
         active : boolean,
-        setActive :
-    ]
-
+        setActive : any
+    }
 }
 
 export default UserProps;

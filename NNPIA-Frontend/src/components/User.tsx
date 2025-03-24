@@ -3,9 +3,7 @@ import {useState} from "react";
 import {Button} from "@mui/material";
 import UserProps from "../domain/UserProps.ts";
 
-
-const User = ({guid, email, active} : UserProps) => {
-    const [status, setStatus] = useState(active)
+const User = ({guid, email, {status, setStatus}} : UserProps) => {
     const btnClickHandler = (event : React.MouseEvent) => { event.preventDefault(); setStatus(!status); }
 
     return <>
