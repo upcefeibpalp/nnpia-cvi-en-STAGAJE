@@ -94,3 +94,13 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 /docs/CV05.md
+/NNPIA-Frontend/vite.config.ts
+/NNPIA-Frontend/eslint.config.js
+/NNPIA-Frontend/.gitignore
+/NNPIA-Frontend/index.html
+/NNPIA-Frontend/tsconfig.node.json
+/NNPIA-Frontend/tsconfig.json
+/NNPIA-Frontend/package-lock.json
+/NNPIA-Frontend/tsconfig.app.json
+/NNPIA-Frontend/package.json
+/NNPIA-Frontend/src/
