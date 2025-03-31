@@ -40,6 +40,7 @@ public class UserService {
     private User modifyUser(User oldUser, User newUser) {
         oldUser.setPassword(newUser.getPassword());
         oldUser.setEmail(newUser.getEmail());
+        oldUser.setActive(newUser.isActive());
         log.debug("User updated: {}", oldUser.toString());
         return userRepository.save(oldUser);
     }

@@ -1,0 +1,2 @@
+ChatGPT: Change the CORS policy to accept requests from frontend port?
+ChatGPT: Use the AXIOS library instead of fetch().

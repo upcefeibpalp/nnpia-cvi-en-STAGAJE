@@ -33,7 +33,7 @@ class UserControllerTest {
 
     @BeforeEach
     void setUp() {
-        User user = new User(69L, "nnpia25", "nnpia25@gmail.com");
+        User user = new User(69L, "nnpia25@gmail.com", "nnpia25", true);
         userRepository.save(user);
         userRepository.flush();
     }
