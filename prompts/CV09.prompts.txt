@@ -1,0 +1,2 @@
+ChatGPT: Create a form to create a new User using the React Hook Form library.
+ChatGPT: How to use TanStack React Router library for routing?

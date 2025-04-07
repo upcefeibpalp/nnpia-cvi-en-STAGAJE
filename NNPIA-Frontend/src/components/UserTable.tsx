@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import CancelIcon from '@mui/icons-material/Cancel';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import UserProps from "../domain/UserProps.ts";
+import UserPropsCensored from "../domain/UserPropsCensored.ts";
 import {useEffect, useState} from "react";
 import axios, {AxiosError} from "axios";
 
@@ -20,12 +20,12 @@ interface UserTableProps {
 }
 
 const UserTable = ({tableTitle = "Uživatelé"} : UserTableProps) => {
-    const [users, setUsers] = useState(new Array<UserProps>())
+    const [users, setUsers] = useState(new Array<UserPropsCensored>())
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState("")
 
     const toggleActiveStatus = (userId : number) => {
-        setUsers((prevUsers: UserProps[]) => prevUsers.map((user) => {
+        setUsers((prevUsers: UserPropsCensored[]) => prevUsers.map((user) => {
             if (user.id === userId)
                 return {...user, active: !user.active};
             return user;
@@ -55,7 +55,7 @@ const UserTable = ({tableTitle = "Uživatelé"} : UserTableProps) => {
         fetchUsers();
     }, [])
 
-    return <>
+    return <div>
         <p>{tableTitle}</p>
         {loading && <CircularProgress />}
         {error && <p style={{color: "red"}}> Chyba: {error}</p>}
@@ -92,7 +92,7 @@ const UserTable = ({tableTitle = "Uživatelé"} : UserTableProps) => {
                 </TableBody>
             </Table>
         </TableContainer>
-    </>
+    </div>
 }
 
 export default UserTable;
